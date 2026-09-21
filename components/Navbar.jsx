@@ -9,7 +9,7 @@ export default function Navbar() {
 
   const menuItems = [
     { label: 'Marketplace', href: '/marketplace' },
-    { label: 'Documentation', href: '/docs' },
+    { label: 'Resources', href: '/docs' },
     { label: 'Blog', href: '/blog' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },

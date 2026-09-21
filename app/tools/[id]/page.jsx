@@ -152,15 +152,13 @@ export default async function ToolDetail({ params }) {
                 <p className="text-slate-400 text-sm">per month</p>
               </div>
 
-              <a
-                href={`https://mcpmarket.com/tools/${tool.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/contact"
                 className="btn-primary w-full text-center block mb-3 flex items-center justify-center gap-2"
               >
-                Install Now
+                Get This Tool
                 <FiArrowRight />
-              </a>
+              </Link>
 
               <Link
                 href={tool.documentation}
