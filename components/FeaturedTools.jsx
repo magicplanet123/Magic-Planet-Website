@@ -63,18 +63,24 @@ export default function FeaturedTools() {
                     </div>
                   </div>
 
-                  <div className="bg-green-900/20 border border-green-700/50 px-4 py-3 rounded-lg mb-6 text-center">
-                    <p className="text-green-300 text-sm font-bold">Free {tool.freeTrial} Trial</p>
-                    <p className="text-green-400 text-xs mt-1">{tool.trialFeatures}</p>
+                  <div className="space-y-2 mb-6">
+                    <div className="bg-blue-900/20 border border-blue-700/50 px-3 py-2 rounded text-center">
+                      <p className="text-blue-300 text-xs font-bold">FREE TIER</p>
+                      <p className="text-blue-400 text-xs">{tool.freeTier}</p>
+                    </div>
+                    <div className="bg-green-900/20 border border-green-700/50 px-3 py-2 rounded text-center">
+                      <p className="text-green-300 text-xs font-bold">TRIAL {tool.freeTrial}</p>
+                      <p className="text-green-400 text-xs">{tool.trialFeatures}</p>
+                    </div>
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <button className="w-full btn-primary flex items-center justify-center gap-2 group/btn">
-                    Try Now Free
+                    Start Free Trial
                     <FiArrowRight className="group-hover/btn:translate-x-2 transition" />
                   </button>
-                  <p className="text-center text-slate-400 text-xs">{tool.pricing}/month after trial</p>
+                  <p className="text-center text-primary text-sm font-bold">{tool.pricing}/month</p>
                 </div>
               </div>
             </Link>

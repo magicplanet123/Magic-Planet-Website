@@ -18,8 +18,14 @@ export default function Navbar() {
   return (
     <nav className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
       <div className="container-max flex justify-between items-center py-4">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl font-bold gradient-text">🌟 Magic Planet</span>
+        <Link href="/" className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center font-bold text-white text-sm">
+            PMPM
+          </div>
+          <div>
+            <div className="text-lg font-bold gradient-text">Magic Planet</div>
+            <div className="text-xs text-primary font-semibold">MCP Market</div>
+          </div>
         </Link>
 
         {/* Desktop Menu */}

@@ -464,10 +464,10 @@ The future of email is personal, not promotional.`
 
                 <p className="text-slate-300 mb-6 text-lg leading-relaxed">{post.excerpt}</p>
 
-                <button className="text-primary hover:text-secondary transition font-bold flex items-center gap-2 group/btn">
+                <Link href={`#article-${post.id}`} className="text-primary hover:text-secondary transition font-bold flex items-center gap-2 group/btn">
                   Read Article
                   <span className="group-hover/btn:translate-x-2 transition">→</span>
-                </button>
+                </Link>
               </article>
             ))}
           </div>
