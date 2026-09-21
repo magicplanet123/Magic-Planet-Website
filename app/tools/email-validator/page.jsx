@@ -8,9 +8,10 @@ export default function EmailValidator() {
   const [results, setResults] = useState(null);
   const [copied, setCopied] = useState(false);
 
-  // Comprehensive email validation
+  // Comprehensive email validation (RFC 5322 simplified)
   const validateEmail = (emailAddress) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Stricter regex: must have valid local part, @, domain with at least one dot
+    const emailRegex = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const isValidFormat = emailRegex.test(emailAddress);
 
     // Extract domain

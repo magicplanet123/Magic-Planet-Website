@@ -153,11 +153,15 @@ export default function URLShortener() {
               {fullShortURL && (
                 <div className="space-y-4 pt-4 border-t border-slate-700/50">
                   <div className="bg-slate-900 rounded-lg p-4">
-                    <p className="text-sm text-slate-400 mb-2">Short URL:</p>
+                    <p className="text-sm text-slate-400 mb-2">Short Code (Copy this):</p>
                     <div className="flex items-center justify-between gap-2">
-                      <code className="text-primary font-mono break-all">{fullShortURL}</code>
+                      <code className="text-secondary font-mono text-lg">{shortCode}</code>
                       <button
-                        onClick={copyToClipboard}
+                        onClick={() => {
+                          navigator.clipboard.writeText(shortCode);
+                          setCopied(true);
+                          setTimeout(() => setCopied(false), 2000);
+                        }}
                         className="p-2 hover:bg-slate-800 rounded transition flex-shrink-0"
                       >
                         {copied ? (
@@ -167,16 +171,27 @@ export default function URLShortener() {
                         )}
                       </button>
                     </div>
+                    <p className="text-xs text-slate-500 mt-2">Use with any short URL service (bit.ly, tinyurl.com, etc.)</p>
+                  </div>
+
+                  <div className="bg-blue-900/20 border border-blue-700/50 rounded-lg p-4">
+                    <p className="text-sm text-blue-300 font-semibold mb-2">How to use:</p>
+                    <p className="text-sm text-blue-200">This tool generates unique short codes. To create actual redirects, use a URL shortening service:</p>
+                    <ul className="text-xs text-blue-200 mt-2 space-y-1 ml-4 list-disc">
+                      <li>bitly.com - Most popular</li>
+                      <li>tinyurl.com - Simple & reliable</li>
+                      <li>short.link - Fast & clean</li>
+                    </ul>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <p className="text-xs text-slate-400 mb-1">Short Code</p>
-                      <code className="text-secondary font-mono">{shortCode}</code>
+                      <p className="text-xs text-slate-400 mb-1">Original URL Length</p>
+                      <p className="text-primary font-mono">{url.length} chars</p>
                     </div>
                     <div>
-                      <p className="text-xs text-slate-400 mb-1">Length Reduction</p>
-                      <p className="text-green-400">{Math.round((1 - fullShortURL.length / url.length) * 100)}% shorter</p>
+                      <p className="text-xs text-slate-400 mb-1">Short Code Length</p>
+                      <p className="text-green-400 font-mono">{shortCode.length} chars</p>
                     </div>
                   </div>
                 </div>
