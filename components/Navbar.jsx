@@ -8,7 +8,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Marketplace', href: '/marketplace' },
+    { label: 'Tools', href: '/marketplace' },
+    { label: 'MCP Marketplace', href: '/mcp-marketplace' },
     { label: 'Resources', href: '/docs' },
     { label: 'Blog', href: '/blog' },
     { label: 'About', href: '/about' },
@@ -20,11 +21,11 @@ export default function Navbar() {
       <div className="container-max flex justify-between items-center py-4">
         <Link href="/" className="flex items-center gap-3">
           <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center font-bold text-white text-sm">
-            PMPM
+            MPT
           </div>
           <div>
             <div className="text-lg font-bold gradient-text">Magic Planet</div>
-            <div className="text-xs text-primary font-semibold">MCP Market</div>
+            <div className="text-xs text-primary font-semibold">Tools</div>
           </div>
         </Link>
 
@@ -40,7 +41,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link href="/marketplace" className="btn-primary">
-            Browse Tools
+            Explore Tools
           </Link>
         </div>
 
@@ -71,7 +72,7 @@ export default function Navbar() {
             className="block btn-primary text-center"
             onClick={() => setIsOpen(false)}
           >
-            Browse Tools
+            Explore Tools
           </Link>
         </div>
       )}

@@ -13,22 +13,22 @@ export default function Hero() {
       <div className="container-max relative z-10">
         <div className="mb-8 inline-block animate-slide-in">
           <span className="badge">
-            ✨ Now Live on MCPMarket
+            ✨ Free & Freemium Tools for Everyone
           </span>
         </div>
 
         <h1 className="text-6xl md:text-8xl font-black mb-6 gradient-text leading-tight tracking-tight animate-slide-in" style={{animationDelay: '0.1s'}}>
-          Enterprise MCPs <br />& AI Tools
+          AI Automation <br />Tools For Teams
         </h1>
 
         <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto font-light animate-slide-in" style={{animationDelay: '0.2s'}}>
-          Production-ready Model Context Protocols and AI-powered solutions for business automation. From recruitment to web scraping, we've got you covered.
+          50+ production-ready tools for business automation. Start free, upgrade as you scale. From recruitment to web scraping, we've got you covered.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-in" style={{animationDelay: '0.3s'}}>
           <Link href="/marketplace" className="btn-primary flex items-center justify-center gap-2 group">
             <FiZap className="group-hover:animate-spin" />
-            Browse All Tools
+            Explore All Tools
             <FiArrowRight className="group-hover:translate-x-2 transition" />
           </Link>
           <Link href="/docs" className="btn-secondary flex items-center justify-center gap-2">
@@ -39,8 +39,8 @@ export default function Hero() {
 
         <div className="mt-20 grid md:grid-cols-3 gap-8 text-left">
           {[
-            { number: '50+', text: 'Premium Tools', icon: '⚡' },
-            { number: '100K+', text: 'Global Users', icon: '🌍' },
+            { number: '50+', text: 'Tools Available', icon: '⚡' },
+            { number: '100K+', text: 'Active Users', icon: '🌍' },
             { number: '99.9%', text: 'Uptime SLA', icon: '🛡️' },
           ].map((stat, i) => (
             <div

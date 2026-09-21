@@ -16,9 +16,9 @@ export default function Home() {
 
       <section className="section-padding bg-slate-900">
         <div className="container-max">
-          <h2 className="text-4xl font-bold mb-4 text-center">Why Magic Planet?</h2>
+          <h2 className="text-4xl font-bold mb-4 text-center">Why Magic Planet Tools?</h2>
           <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
-            Trusted by companies worldwide for reliable, production-ready MCP tools and AI solutions.
+            Trusted by companies worldwide for reliable, production-ready automation tools and AI solutions.
           </p>
 
           <div className="grid md:grid-cols-4 gap-6">

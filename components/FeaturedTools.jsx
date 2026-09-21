@@ -19,9 +19,9 @@ export default function FeaturedTools() {
 
       <div className="container-max relative z-10">
         <div className="text-center mb-16">
-          <span className="badge mb-4 inline-block">✨ Premium Features</span>
+          <span className="badge mb-4 inline-block">✨ Most Popular</span>
           <h2 className="text-5xl md:text-6xl font-bold mb-4 gradient-text">Featured Tools</h2>
-          <p className="text-xl text-slate-300">Most popular MCPs built by Magic Planet</p>
+          <p className="text-xl text-slate-300">Top-rated automation tools by Magic Planet</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
