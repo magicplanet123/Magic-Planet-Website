@@ -52,7 +52,7 @@ export default function FeaturedTools() {
 
                   <p className="text-slate-400 text-sm mb-6 line-clamp-3">{tool.description}</p>
 
-                  <div className="flex items-center gap-6 text-sm text-slate-300 mb-6 pb-6 border-b border-slate-700/50">
+                  <div className="flex items-center gap-6 text-sm text-slate-300 mb-4 pb-4 border-b border-slate-700/50">
                     <div className="flex items-center gap-2">
                       <FiStar className="text-yellow-400 text-lg" />
                       <span className="font-semibold">{tool.rating}/5</span>
@@ -62,12 +62,20 @@ export default function FeaturedTools() {
                       <span className="font-semibold">{tool.downloads.toLocaleString()}</span>
                     </div>
                   </div>
+
+                  <div className="bg-green-900/20 border border-green-700/50 px-4 py-3 rounded-lg mb-6 text-center">
+                    <p className="text-green-300 text-sm font-bold">Free {tool.freeTrial} Trial</p>
+                    <p className="text-green-400 text-xs mt-1">{tool.trialFeatures}</p>
+                  </div>
                 </div>
 
-                <button className="w-full btn-primary flex items-center justify-center gap-2 group/btn">
-                  View Details
-                  <FiArrowRight className="group-hover/btn:translate-x-2 transition" />
-                </button>
+                <div className="space-y-2">
+                  <button className="w-full btn-primary flex items-center justify-center gap-2 group/btn">
+                    Try Now Free
+                    <FiArrowRight className="group-hover/btn:translate-x-2 transition" />
+                  </button>
+                  <p className="text-center text-slate-400 text-xs">{tool.pricing}/month after trial</p>
+                </div>
               </div>
             </Link>
           ))}

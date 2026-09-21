@@ -3,14 +3,14 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'Magic Planet - MCP & AI Tools Marketplace',
-  description: 'Enterprise-grade MCPs and AI tools for business automation. Recruitment, data integration, web scraping, and more.',
-  keywords: 'MCP, AI tools, automation, recruitment, marketplace',
+  title: 'Magic Planet MCP Marketplace - Enterprise AI & Automation Tools',
+  description: 'Magic Planet MCP Marketplace: Enterprise-grade Model Context Protocols and AI tools for business automation. Recruitment, data integration, web scraping, and more. Free 3-7 day trials.',
+  keywords: 'MCP marketplace, AI tools, automation tools, recruitment automation, data integration, web scraping, business automation, free tools',
   authors: [{ name: 'Magic Planet' }],
   openGraph: {
-    title: 'Magic Planet - MCP & AI Tools Marketplace',
-    description: 'Enterprise-grade MCPs and AI tools for business automation.',
-    url: 'https://magicplanet.com',
+    title: 'Magic Planet MCP Marketplace',
+    description: 'Enterprise AI tools for business automation. Try free for 3-7 days.',
+    url: 'https://mcp-marketplace.vercel.app',
     type: 'website',
   },
 };
