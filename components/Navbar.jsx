@@ -8,11 +8,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Tools', href: '/marketplace' },
+    { label: 'Free Tools', href: '/free-tools' },
+    { label: 'Premium Tools', href: '/marketplace' },
     { label: 'MCP Marketplace', href: '/mcp-marketplace' },
-    { label: 'Resources', href: '/docs' },
+    { label: 'Documentation', href: '/docs' },
     { label: 'Blog', href: '/blog' },
-    { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
   ];
 

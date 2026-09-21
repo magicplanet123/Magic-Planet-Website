@@ -16,7 +16,6 @@ export default function MCPMarketplace() {
     { id: 'web', label: 'Web & APIs', count: 0 },
   ];
 
-  // Free MCPs available on mcpmarket.com
   const allMcps = [
     {
       id: 1,
@@ -25,7 +24,7 @@ export default function MCPMarketplace() {
       description: 'Generate natural-sounding speech from text using ElevenLabs API',
       rating: 4.8,
       downloads: 12500,
-      url: 'https://mcpmarket.com/server/elevenlabs',
+      mcpmarketUrl: 'https://mcpmarket.com/server/elevenlabs',
       features: ['TTS conversion', 'Multi-language', 'Voice selection'],
       free: true,
       setup_time: '5 min'
@@ -37,7 +36,7 @@ export default function MCPMarketplace() {
       description: 'Search the web using DuckDuckGo with no tracking',
       rating: 4.9,
       downloads: 28000,
-      url: 'https://mcpmarket.com/server/duckduckgo-9',
+      mcpmarketUrl: 'https://mcpmarket.com/server/duckduckgo-9',
       features: ['Web search', 'No tracking', 'Anonymous'],
       free: true,
       setup_time: '2 min'
@@ -49,7 +48,7 @@ export default function MCPMarketplace() {
       description: 'Access and manipulate Figma designs directly from Claude',
       rating: 4.7,
       downloads: 15200,
-      url: 'https://mcpmarket.com/server/figma-24',
+      mcpmarketUrl: 'https://mcpmarket.com/server/figma-24',
       features: ['Design access', 'Asset export', 'Prototyping'],
       free: true,
       setup_time: '10 min'
@@ -61,7 +60,7 @@ export default function MCPMarketplace() {
       description: 'Browse and analyze GitHub repositories with Claude',
       rating: 4.9,
       downloads: 35400,
-      url: 'https://mcpmarket.com/server/github',
+      mcpmarketUrl: 'https://mcpmarket.com/server/github',
       features: ['Repo browsing', 'Code analysis', 'Issue tracking'],
       free: true,
       setup_time: '8 min'
@@ -73,7 +72,7 @@ export default function MCPMarketplace() {
       description: 'Send messages and read Slack conversations from Claude',
       rating: 4.6,
       downloads: 18900,
-      url: 'https://mcpmarket.com/server/slack',
+      mcpmarketUrl: 'https://mcpmarket.com/server/slack',
       features: ['Message sending', 'Channel reading', 'Thread access'],
       free: true,
       setup_time: '12 min'
@@ -85,7 +84,7 @@ export default function MCPMarketplace() {
       description: 'Access files and folders from Google Drive',
       rating: 4.8,
       downloads: 22100,
-      url: 'https://mcpmarket.com/server/google-drive',
+      mcpmarketUrl: 'https://mcpmarket.com/server/google-drive',
       features: ['File access', 'Search', 'Download/upload'],
       free: true,
       setup_time: '10 min'
@@ -97,7 +96,7 @@ export default function MCPMarketplace() {
       description: 'Read and write to Notion databases from Claude',
       rating: 4.7,
       downloads: 19800,
-      url: 'https://mcpmarket.com/server/notion',
+      mcpmarketUrl: 'https://mcpmarket.com/server/notion',
       features: ['Database access', 'Page creation', 'Data sync'],
       free: true,
       setup_time: '12 min'
@@ -109,7 +108,7 @@ export default function MCPMarketplace() {
       description: 'Get real-time weather data for any location',
       rating: 4.5,
       downloads: 11200,
-      url: 'https://mcpmarket.com/server/weather',
+      mcpmarketUrl: 'https://mcpmarket.com/server/weather',
       features: ['Real-time data', 'Forecasts', 'Alerts'],
       free: true,
       setup_time: '5 min'
@@ -121,19 +120,19 @@ export default function MCPMarketplace() {
       description: 'Query SQL databases (PostgreSQL, MySQL, SQLite)',
       rating: 4.6,
       downloads: 14300,
-      url: 'https://mcpmarket.com/server/database',
+      mcpmarketUrl: 'https://mcpmarket.com/server/database',
       features: ['SQL execution', 'Schema browsing', 'Transaction support'],
       free: true,
       setup_time: '15 min'
     },
     {
       id: 10,
-      name: 'Cursor Code Editor Integration',
+      name: 'Cursor Code Editor',
       category: 'productivity',
       description: 'Extend Cursor editor with Claude AI capabilities',
       rating: 4.9,
       downloads: 42100,
-      url: 'https://mcpmarket.com/server/cursor',
+      mcpmarketUrl: 'https://mcpmarket.com/server/cursor',
       features: ['Code completion', 'AI chat', 'Refactoring'],
       free: true,
       setup_time: '5 min'
@@ -145,7 +144,7 @@ export default function MCPMarketplace() {
       description: 'Create and manage Linear issues from Claude',
       rating: 4.7,
       downloads: 13450,
-      url: 'https://mcpmarket.com/server/linear',
+      mcpmarketUrl: 'https://mcpmarket.com/server/linear',
       features: ['Issue creation', 'Status updates', 'Team sync'],
       free: true,
       setup_time: '10 min'
@@ -157,7 +156,7 @@ export default function MCPMarketplace() {
       description: 'Access Stripe data and create payments from Claude',
       rating: 4.8,
       downloads: 9870,
-      url: 'https://mcpmarket.com/server/stripe',
+      mcpmarketUrl: 'https://mcpmarket.com/server/stripe',
       features: ['Payment processing', 'Customer data', 'Invoice generation'],
       free: true,
       setup_time: '15 min'
@@ -183,12 +182,12 @@ export default function MCPMarketplace() {
       <section className="section-padding bg-gradient-to-r from-primary/20 to-secondary/20 border-b border-slate-700/50">
         <div className="container-max">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 gradient-text">MCP Marketplace</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 gradient-text">Top MCPs for Claude</h1>
             <p className="text-xl text-slate-300 mb-4">
-              Connect 142K+ free Model Context Protocols to Claude and extend AI capabilities
+              Recommended Model Context Protocols to extend Claude's capabilities
             </p>
             <p className="text-slate-400">
-              All MCPs are free to use. Connect them to Claude Code to unlock advanced integrations with your favorite tools.
+              All MCPs are free to use. Connect them to Claude Code to unlock integrations with your favorite tools and services.
             </p>
           </div>
         </div>
@@ -264,39 +263,18 @@ export default function MCPMarketplace() {
                     <span className="font-semibold">{mcp.setup_time}</span>
                   </div>
                   <a
-                    href={mcp.url}
+                    href={mcp.mcpmarketUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full btn-primary flex items-center justify-center gap-2 group/btn"
+                    className="w-full btn-primary flex items-center justify-center gap-2 group/btn text-sm"
                   >
-                    <FiDownload />
-                    Connect to Claude
+                    Get MCP
                     <FiExternalLink className="group-hover/btn:translate-x-1 transition" />
                   </a>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Browse All MCPs */}
-      <section className="section-padding bg-slate-900">
-        <div className="container-max text-center">
-          <h2 className="text-4xl font-bold mb-4">Browse All 142K+ MCPs</h2>
-          <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Visit MCPMarket.com to explore the complete directory of Model Context Protocols
-          </p>
-          <a
-            href="https://mcpmarket.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary inline-flex items-center gap-2 text-lg"
-          >
-            <FiTrendingUp />
-            Visit Full MCP Market
-            <FiExternalLink />
-          </a>
         </div>
       </section>
 
@@ -314,56 +292,34 @@ export default function MCPMarketplace() {
             </div>
 
             <div className="glass border border-slate-700/50 rounded-2xl p-6">
-              <h3 className="text-xl font-bold mb-3">How do I connect an MCP?</h3>
-              <p className="text-slate-300 mb-3">
-                Simply click "Connect to Claude" on any MCP. You'll be guided through a 5-15 minute setup process that involves:
-              </p>
-              <ul className="list-disc list-inside text-slate-300 space-y-1">
-                <li>Installing the MCP locally or connecting credentials</li>
-                <li>Adding it to your Claude configuration</li>
-                <li>Testing the connection with Claude</li>
-              </ul>
-            </div>
-
-            <div className="glass border border-slate-700/50 rounded-2xl p-6">
               <h3 className="text-xl font-bold mb-3">Are all MCPs free?</h3>
               <p className="text-slate-300">
-                Yes! All MCPs in this marketplace are 100% free to download and use. Some may require API keys from external services (like Stripe, GitHub), but those are also free to get.
+                Yes! All MCPs are 100% free to download and use. Some may require API keys from external services (like Stripe, GitHub), but those are also free to get.
               </p>
             </div>
 
             <div className="glass border border-slate-700/50 rounded-2xl p-6">
               <h3 className="text-xl font-bold mb-3">What can I do with MCPs?</h3>
-              <p className="text-slate-300">
-                With MCPs, you can:
-              </p>
+              <p className="text-slate-300 mb-2">With MCPs, you can:</p>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-                <li>Access your GitHub repos and get code reviews</li>
+                <li>Access and analyze GitHub repositories</li>
                 <li>Send Slack messages and read conversations</li>
                 <li>Query databases and run SQL</li>
-                <li>Create issues in Linear or GitHub</li>
-                <li>Send emails and manage calendars</li>
-                <li>Upload files to Google Drive</li>
+                <li>Manage issues in Linear or GitHub</li>
+                <li>Work with Google Drive files</li>
                 <li>And much more!</li>
               </ul>
-            </div>
-
-            <div className="glass border border-slate-700/50 rounded-2xl p-6">
-              <h3 className="text-xl font-bold mb-3">How do I find my perfect MCP?</h3>
-              <p className="text-slate-300">
-                Filter by category above to find MCPs for your use case. Check the features, read reviews, and click through to learn more. If you need help, check out our documentation or blog posts.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA - Link to Skills */}
+      {/* CTA - Link to Premium Tools */}
       <section className="section-padding bg-gradient-to-r from-primary/20 to-secondary/20 border-t border-slate-700/50">
         <div className="container-max text-center">
-          <h2 className="text-4xl font-bold mb-4">Want Production-Ready Workflows?</h2>
+          <h2 className="text-4xl font-bold mb-4">Need Production-Ready Automation?</h2>
           <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Check out our premium Skills that combine multiple MCPs and add advanced automation logic
+            Check out our premium Skills - production-ready workflows that combine multiple MCPs with advanced automation logic
           </p>
           <Link href="/marketplace" className="btn-primary inline-flex items-center gap-2 text-lg">
             <FiTrendingUp />
