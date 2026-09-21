@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FiArrowRight, FiSpark, FiZap, FiCpu } from 'react-icons/fi';
+import { FiArrowRight, FiZap, FiCpu } from 'react-icons/fi';
 
 export default function Hero() {
   return (
@@ -13,8 +13,7 @@ export default function Hero() {
       <div className="container-max relative z-10">
         <div className="mb-8 inline-block animate-slide-in">
           <span className="badge">
-            <FiSpark className="inline mr-2" />
-            Now Live on MCPMarket
+            ✨ Now Live on MCPMarket
           </span>
         </div>
 
