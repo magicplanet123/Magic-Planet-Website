@@ -6,6 +6,7 @@ import { useState } from 'react';
 export default function Blog() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [expandedPost, setExpandedPost] = useState(null);
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -17,7 +18,7 @@ export default function Blog() {
   const posts = [
     {
       id: 1,
-      title: '2024 Guide: How to Automate Recruitment with AI',
+      title: 'How to Automate Recruitment with AI',
       excerpt: 'Discover how AI is transforming recruitment. Learn practical strategies to automate candidate screening, scoring, and outreach while maintaining quality hiring.',
       date: '2026-09-21',
       category: 'Recruitment',
@@ -187,7 +188,7 @@ The best part? These tools are available now and easy to implement.`
     },
     {
       id: 4,
-      title: 'AI Tools Marketplace: What to Look For in 2026',
+      title: 'Choosing the Right AI Tools for Your Business',
       excerpt: 'Not all AI tools are created equal. Here is a comprehensive guide to evaluating and choosing the right tools for your business.',
       date: '2026-09-12',
       category: 'Technology',
@@ -283,7 +284,7 @@ The right tool can save weeks of development. Take time to choose wisely.`
     },
     {
       id: 5,
-      title: 'Web Scraping Best Practices: 2026 Edition',
+      title: 'Web Scraping Best Practices: Ethical & Effective',
       excerpt: 'Learn ethical, legal, and effective web scraping techniques that will not get you blocked.',
       date: '2026-09-10',
       category: 'Technical',
@@ -464,10 +465,19 @@ The future of email is personal, not promotional.`
 
                 <p className="text-slate-300 mb-6 text-lg leading-relaxed">{post.excerpt}</p>
 
-                <Link href={`#article-${post.id}`} className="text-primary hover:text-secondary transition font-bold flex items-center gap-2 group/btn">
-                  Read Article
-                  <span className="group-hover/btn:translate-x-2 transition">→</span>
-                </Link>
+                <button
+                  onClick={() => setExpandedPost(expandedPost === post.id ? null : post.id)}
+                  className="text-primary hover:text-secondary transition font-bold flex items-center gap-2 group/btn"
+                >
+                  {expandedPost === post.id ? 'Hide Article' : 'Read Article'}
+                  <span className={`group-hover/btn:translate-x-2 transition ${expandedPost === post.id ? 'rotate-90' : ''}`}>→</span>
+                </button>
+
+                {expandedPost === post.id && (
+                  <div className="mt-6 pt-6 border-t border-slate-700/50 prose prose-invert max-w-none">
+                    <div className="text-slate-300 whitespace-pre-wrap">{post.content}</div>
+                  </div>
+                )}
               </article>
             ))}
           </div>

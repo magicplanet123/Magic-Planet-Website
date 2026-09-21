@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Guides from './guides';
 
 export default function Docs() {
   const docs = [
@@ -100,26 +101,10 @@ export default function Docs() {
             </div>
           </div>
 
-          {/* Documentation Grid */}
+          {/* Tool Guides */}
           <div id="guides" className="mb-16">
             <h2 className="text-3xl font-bold mb-8">Tool Guides</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {docs.map((doc, i) => (
-                <div
-                  key={i}
-                  className="glass border border-slate-700/50 rounded-xl p-6 card-hover group cursor-pointer"
-                >
-                  <div className="text-4xl mb-3">{doc.icon}</div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition">{doc.title}</h3>
-                  <p className="text-slate-400 text-sm mb-3">{doc.desc}</p>
-                  <p className="text-slate-300 text-sm mb-4">{doc.content}</p>
-                  <button className="text-primary hover:text-secondary transition font-medium text-sm flex items-center gap-1 group/btn">
-                    Read Guide
-                    <span className="group-hover/btn:translate-x-1 transition">→</span>
-                  </button>
-                </div>
-              ))}
-            </div>
+            <Guides />
           </div>
 
           {/* API Reference */}
